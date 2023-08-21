@@ -1,10 +1,81 @@
 :root{
-    --cor-do-fundo: #fff;
-    --branco: #fff;
+  --cor-de-fundo: #f5e6f0;
+  --branco: #fdfdfd;
+  --fonte-principal:"Poppins";
+  --amarelo: #f7b80d;
+  --roxo: #C75EEB;
+  --fonte-principal: "Poppins";
+  --fonte-secundaria:"Josefin Sans";
 }
-body{
-    background-color: var(--cor-de-fundo);
+
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--branco);
+  align-items: center;
+  position: relative;
 }
-h1{
-    background-color: #fff;
+
+.cabecalho-menu{
+  display: inline-block;
+  background-image: url(../img/Menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-imagem{
+  padding: 1em;
+}
+
+.lista-menu{
+  background-color: var(--branco);
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 60vw;
+}
+
+.container-botao{
+  display: none;
+}
+
+.container-botao:checked~.lista-menu{
+  display: block;
+}
+
+.lista-menu-titulo,.lista-menu-item{
+  font-weight: 700;
+  color: var(--amarelo);
+  padding: 1em;
+}
+
+.lista-menu-link{
+  color: var(--roxo);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.container__titulo{
+  display: none;
+}
+
+@media screen and (min-width:1024px){
+  .container__titulo{
+      display: block;
+      font-family: var(--fonte-secundaria);
+      font-size: 30px;
+      font-weight: 300;
+  }
+  .container__titulo--negrito{
+      font-weight: 400;
+  }
+
 }
